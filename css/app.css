@@ -24,7 +24,7 @@ body {
     color: #222222;
 }
 #to-top {
-    z-index: 99;
+    z-index: 1000;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -275,9 +275,9 @@ ul.sidebar-list {
     display: block;
     padding: 1em 0 1em 0.8em;
     background-color: #ffffff; /* text color */
-    -webkit-box-shadow: inset -15px 0 15px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: inset -15px 0 15px rgba(0, 0, 0, 0.1);
-    box-shadow: inset -15px 0 15px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: inset -10px 0 10px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset -10px 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: inset -10px 0 10px rgba(0, 0, 0, 0.1);
  }
  ul.sidebar-list li.logo-bar a.logo {border: 0;}
  ul.sidebar-list li.logo-bar a.logo:hover {
@@ -385,9 +385,9 @@ ul.sidebar-list li a:hover { /* hover text & background color */
  }
  /* NOTE: hero-img background properties controlled on .bxslider li with jquery.bxslider.css file */
  .hero-img {width: 48.125em /* 770px */; height: 26.875em /* 430px */;}
- .rural {background-image: url(../img/global/hero-overlay.png), url(../img/global/hero-rural.jpg);}
- .desert {background-image: url(../img/global/hero-overlay.png), url(../img/global/hero-desert.jpg);}
- .urban {background-image: url(../img/global/hero-overlay.png), url(../img/global/hero-urban.jpg);}
+ .rural {background-image: url(../img/hero/hero-overlay.png), url(../img/hero/hero-rural.jpg);}
+ .desert {background-image: url(../img/hero/hero-overlay.png), url(../img/hero/hero-desert.jpg);}
+ .urban {background-image: url(../img/hero/hero-overlay.png), url(../img/hero/hero-urban.jpg);}
 /* ---- 568 ( + ) ---- */
 @media screen and (min-width: 35.5em){
     .hero-headline {font-size: 1.7rem;}
@@ -501,7 +501,73 @@ a.icon-link:hover {color: #003366;}
   /* CULTURE IMAGES
    ======================== */
  /* ---- base (all) ---- */  
-.culture-img {margin: 0 0 3em 0; position: relative; }
+.culture-img {margin: 0 0 3em 0; position: relative;}
+.culture-headline {
+    font-family: "Stratum1WebMedium", sans-serif;
+    font-size: 1.125rem; /* 18px */
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0 0 0 0;
+}
+.culture-text {color: #ffffff; font-size: .85rem; margin: 0 0 0 0;}
+.box-center {
+    max-width: 21.875em; /* 350px */
+    max-height: 21.875em; /* 350px */
+    position: relative;
+    display: inline-block;
+}
+.box {
+  cursor: pointer;
+  max-width: 21.875em; /* 350px */
+  max-height: 21.875em; /* 350px */
+  position: relative;
+  overflow: hidden;
+  display: inline-block !important; /* centers box inside of single column */
+}
+.box img {-webkit-transition: all 300ms ease-out; -moz-transition: all 300ms ease-out; -o-transition: all 300ms ease-out; -ms-transition: all 300ms ease-out; transition: all 300ms ease-out; }
+.box .overbox {
+    box-shadow: inset 0 0 40px 20px rgba(0,0,0,0.1);
+    background-color: #1e2f3b;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    z-index: 100;
+    -webkit-transition: all 300ms ease-out; -moz-transition: all 300ms ease-out; -o-transition: all 300ms ease-out; -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    opacity: 0;
+    min-width: 100%;
+    min-height: 100%;
+    padding: 35% 5% 0 5%;
+}
+.box:hover .overbox { opacity: 0.9; }
+.box .overtext {
+    -webkit-transition: all 300ms ease-out; -moz-transition: all 300ms ease-out; -o-transition: all 300ms ease-out; -ms-transition: all 300ms ease-out; transition: all 300ms ease-out; 
+    transform: translateY(40px); -webkit-transform: translateY(40px);
+}
+.box .title {
+    text-transform: uppercase;
+    opacity: 0;
+    transition-delay: 0.1s;
+    transition-duration: 0.2s;
+}
+.box:hover .culture-headline,
+.box:focus .culture-headline {
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+}
+.box .culture-text {
+    opacity: 0;
+    /*transition-delay: 0.2s;
+    transition-duration: 0.2s;*/
+}
+.box:hover .culture-text,
+.box:focus .culture-text {
+    opacity: 1;
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+}
 
  /* OVERLAY
    ======================== */
