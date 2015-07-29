@@ -47,6 +47,21 @@ jQuery('#to-top').click(function (event) {
     return false;
 });
 
+////////////////////////////////////////////////
+// parallax
+////////////////////////////////////////////////
+var top_header = '';
+$(document).ready(function() {
+    top_header = $('.main-contact');
+});
+$(window).scroll(function() {
+    var st = $(window).scrollTop();
+    top_header.css({
+        'background-position': "center " + (st * .5) + "px"
+    });
+}); // END PARALLAX //
+
+
 $(document).ready(function () { // BEGIN DOCUMENT READY FUNCTION //
 
     ////////////////////////////////////////////////
