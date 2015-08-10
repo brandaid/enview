@@ -393,7 +393,9 @@ ul.sidebar-list li a.current { /* current state background color */
  .hero-img {width: 48.125em /* 770px */; height: 26.875em /* 430px */;}
  .rural {background-image: url(../img/hero/hero-overlay.png), url(../img/hero/hero-rural.jpg);}
  .desert {background-image: url(../img/hero/hero-overlay.png), url(../img/hero/hero-desert.jpg);}
+ .desert-road {background-image: url(../img/hero/hero-overlay.png), url(../img/hero/hero-desert-road.jpg);}
  .urban {background-image: url(../img/hero/hero-overlay.png), url(../img/hero/hero-urban.jpg);}
+ .city {background-image: url(../img/hero/hero-overlay.png), url(../img/hero/hero-city.jpg);}
 /* ---- 568 ( + ) ---- */
 @media screen and (min-width: 35.5em){
     .hero-headline {font-size: 1.7rem;}
@@ -428,7 +430,7 @@ ul.sidebar-list li a.current { /* current state background color */
      background-color: #00acee;
      /*background-color: rgba(0,172,238,0.7);*/
      /*background: url(../img/global/clouds.jpg);*/
-     background: url(../img/global/clouds-scroll.jpg);
+     /*background: url(../img/global/clouds-scroll.jpg);*/
      background-size: cover;
 }
  .main-bgd {
