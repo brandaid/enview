@@ -123,6 +123,10 @@ ul li a:hover {color: #003366; border-bottom: 1px solid #003366; /* red */}
 .neg-btm-sm {margin-bottom: -1em;}
 .neg-top {margin-top: -2em;}
 .neg-btm {margin-bottom: -2.5em;}
+/* ---- 768 ( - ) ---- */
+@media screen and (max-width: 60em){
+    .no-xtra-full-btm-pad {padding-bottom: 0;}
+}
 /* ---- 768 ( + ) ---- */
 @media screen and (min-width: 48em){
     .xtra-full-top {margin-top: 6.25em; /* 100px */}
@@ -539,6 +543,16 @@ a.icon-link:hover {color: #003366;}
     color: #ffffff;
     margin: 0 0 0 0;
 }
+.culture-headline2 {
+    font-family: "Stratum1WebMedium", sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 1em;
+    width: 15em;
+    max-width: 15em; /* 240px */
+    display: inline-block !important; /* centers box inside of single column */
+}
 .culture-text {color: #ffffff; font-size: .85rem; margin: 0 0 0 0;}
 /*.vignette {box-shadow: inset 0px 0px 85px rgba(0,0,0,.5); display: inline-block; position: relative;}
 .vignette-img {position: relative; z-index: -1;}*/
@@ -548,6 +562,13 @@ a.icon-link:hover {color: #003366;}
     max-height: 21.875em; /* 350px */
     position: relative;
     overflow: hidden;
+    display: inline-block !important; /* centers box inside of single column */
+}
+.box2 {
+    max-width: 15em; /* 240px */
+    background: #003366;
+    position: relative;
+    margin: 0 0 3em 0;
     display: inline-block !important; /* centers box inside of single column */
 }
 .box img {-webkit-transition: all 300ms ease-out; -moz-transition: all 300ms ease-out; -o-transition: all 300ms ease-out; -ms-transition: all 300ms ease-out; transition: all 300ms ease-out; }
@@ -597,14 +618,15 @@ a.icon-link:hover {color: #003366;}
 /* custom */
 /* ---- 476 ( + ) ---- */
 @media screen and (max-width: 29.75em){
-	.box.culture-img{ display: block!important; }
-	.hero-slider > li .hero-info-pad{ margin-top: -100px; }
-	.hero-slider li, .alt-slider li, .bxslider li{ padding-top: 100px; }
+	.box.culture-img { display: block!important; }
+	.hero-slider > li .hero-info-pad { margin-top: -100px; }
+	.hero-slider li, .alt-slider li, .bxslider li { padding-top: 100px; }
 }
 /* ---- 1024 ( + ) ---- */
 @media screen and (min-width: 64em){
 	.box.culture-img {display: block!important;}
 }
+ 
 
  /* OVERLAY
    ======================== */
