@@ -489,9 +489,10 @@ ul.sidebar-list li a.current { /* current state background color */
      text-align: center;
      margin: 0 0 1.5em 0;
 }
-.icon-base-puzzle {
+.icon-base-alt { /* accommodates different width of icon vs. others and alignment of text below to other columns*/
      width: 65px; 
      height 50px;
+     margin: 0 0 1.3em 0;
 }
 .icon-photo {
     margin: 0 0 2em 0;
