@@ -522,7 +522,7 @@ ul.sidebar-list li a.current { /* current state background color */
     margin: -0.65em 0 0.65em 0;
 }
 .icon-font a:hover {color: #00acee;}
-.icon-text {color: #666666; font-size: .85rem; margin: 0 0 1em 0;}
+.icon-text {color: #666666; font-size: .85rem; margin: 0 0 2.5em 0;}
 a.icon-link {color: #00acee; font-size: 1rem;}
 a.icon-link:hover {color: #003366;}
  /* ---- 768 (+) ---- */ 
@@ -665,10 +665,10 @@ label.email-modal {font-size: 1.125rem !important; /* 18px */ color: #003366; pa
    ======================== */
 /* ---- base (all) ---- */ 
 span.error, small.error {background: #003366; color: #ffffff;}
-label.error {color: #ffffff;}
+label.error {color: #ffffff; padding: 0 0 1em 0;}
  /* custom */
 .hidden{ display: none; }
-#form_contact .error.error_message{ display: none; }
+#form_contact .error.error_message{ display: none; margin: -1.2em 0 1em 0;}
 
  /* REVEAL MODAL
    ======================== */

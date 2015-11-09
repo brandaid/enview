@@ -284,7 +284,7 @@
                     <div class="main-text">Enview’s team has deep experience in applying advanced data analytics to solve impactful, real-world issues. We are passionate about using our expertise in computer vision, machine learning, and data visualization to solve challenging problems that matter.</div>
                 </div><!-- /.col -->
             </div><!-- /.row -->
-            <div class="row text-center full-btm" data-equalizer>
+            <div class="row text-center" data-equalizer>
                 <div class="medium-12 large-4 columns" data-equalizer-watch>
                     <img class="icon-photo" src="img/team/san.jpg">
                     <div class="icon-headline">San Gunawardana</div>
@@ -307,7 +307,7 @@
                     <div class="icon-text">Eleanor has a PhD in aerospace engineering from Stanford where she did computer vision and Bayesian inference for hazard detection. She has worked at JPL and NASA on spacecraft that were sent to the Moon and Mars, contributing to navigation, sensor fusion, and embedded software. At Enview, Eleanor is excited to use intelligent algorithms to directly impact people and the planet.<br>--</div>
                 </div>
             </div><!-- /.row -->
-            <div class="row text-center full-btm" data-equalizer>
+            <div class="row text-center" data-equalizer>
                 <div class="medium-12 large-4 columns" data-equalizer-watch>
                     <img class="icon-photo" src="img/team/damond.jpg">
                     <div class="icon-headline">Damond Hedley</div>
@@ -512,7 +512,7 @@
             
             <form id="form_contact">
             	<input type="hidden" name="action" value="send_form" />
-              <div class="row half-btm">
+              <div class="row">
                 <div class="medium-6 columns">
                   <label class="error"><span class="white">First Name*</span>
                     <input name="first_name" id="field_first_name" type="text" placeholder="" />
@@ -527,7 +527,7 @@
                 </div><!-- /.col -->
               </div><!-- /.row -->
               
-              <div class="row half-btm">
+              <div class="row">
                 <div class="medium-6 columns">
                   <label class="error"><span class="white">Email Address*</span>
                     <input name="email" id="field_email" type="text" placeholder="" />
@@ -570,7 +570,20 @@
 
         
     </section><!-- /.container -->
-        
+      
+   <!-- CONTACT FORM OK -->
+   <div id="contactok" class="reveal-modal" data-reveal aria-labelledby="contact" aria-hidden="true" role="dialog">
+       <div class="reveal-modal-headline" id="jobUpdates">THANK YOU</div>
+       <div class="reveal-modal-sub-headline">Your email has been sent</div>
+       <p>We look forward to being in contact with you.</p>
+       <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+   </div>
+   
+   <!-- CONTACT FORM NOT OK -->
+   <div id="contactnok" class="reveal-modal" data-reveal aria-labelledby="contact" aria-hidden="true" role="dialog">
+       <p class="text"></p>
+       <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+    </div>
         
     <!-- CAREERS MODAL 1 -->
     <div id="jobsModal1" class="reveal-modal" data-reveal aria-labelledby="jobUpdates" aria-hidden="true" role="dialog">

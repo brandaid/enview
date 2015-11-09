@@ -111,8 +111,17 @@ jQuery( document ).ready(function($) {
 					comment: f_comment
 				},
 				function( data ) {
-					if(data.status==true) alert('Your email has been sent.');
-					else alert('Error submitting form. '+data.message);
+					if(data.status==true){
+						$('#contactok').foundation('reveal', 'open');
+						var modal=$('#contactok');
+						var pos=$("#contact").position();
+	  					modal.css('top',pos.top+'px');
+	  					$('#form_contact input, #form_contact textarea').val('');
+					}
+					else{
+						$('#contactnok .text').html('Error submitting form. '+data.message);
+						$('#contactnok').foundation('reveal', 'open');
+					}
 				},
 				'json'
 			);
@@ -126,6 +135,18 @@ jQuery( document ).ready(function($) {
 	  var modal = $(this);
 	  var pos=$("#careers").position();
 	  modal.css('top',pos.top+'px');
+	});
+	
+	$(document).on('opened.fndtn.reveal', '#contactok[data-reveal]', function () {
+		var modal=$('#contactok');
+		var pos=$("#contact").position();
+		modal.css('top',(pos.top+($("#contact").height()/2))+'px');
+	});
+	
+	$(document).on('opened.fndtn.reveal', '#contactnok[data-reveal]', function () {
+		var modal=$('#contactnok');
+		var pos=$("#contact").position();
+		modal.css('top',(pos.top+($("#contact").height()/2))+'px');
 	});
 	
 });
