@@ -1,0 +1,134 @@
+.fa-bars {
+	border: 0;
+	background: transparent;
+	color: $brand-primary;
+	font-size: 33px;
+	padding: 0;
+}
+
+.navbar {
+	background: white;
+	top: 69px;
+	position: absolute;
+	display: none;
+	left: 0;
+	width: 100%;
+	text-align: left;
+	z-index: 999;
+	-webkit-box-shadow: 0 7px 8px 0 rgba(0,0,0,0.1);
+	box-shadow: 0 7px 8px 0 rgba(0,0,0,0.1);
+	padding-top: 20px;
+	padding-bottom: 44px;
+	ul {
+		li {
+			a {
+				display: block;
+				padding: 15px 40px;
+				font-size: 16px;
+				color: $gray;
+				&:hover {
+					background: $brand-secondary;
+					color: white;
+					font-family: $p-font-bold;
+				}
+			}
+			
+		}
+	}
+	.btn {
+		margin-left: 40px;
+		margin-top: 20px;
+		display: inline-block;
+	}
+}
+.fa-times:before {
+	content: "✕";
+}
+// 768px
+@media all and (min-width: $screen-portrait) {
+	.fa-bars:before {
+		content: "\f107";
+	}
+	.fa-bars {
+		position: absolute;
+		right: 25px;
+		top: 25px;
+	}
+	.fa-times:before {
+		content: "✕";
+		font-size: 24px;
+		position: relative;
+		top: -2px;
+		left: -2px;
+		font-weight: bold;
+	}
+	.box-title-category {
+		width: 220px;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		border-right: 1px solid #ccc;
+		span {
+			font-family: $p-font-medium;
+			padding-left: 30px;
+			color: $brand-primary;
+			font-size: 16px;
+			text-align: left;
+			line-height: 89px;
+			display: block;
+		}
+	}
+	.navbar {
+		left: 0;
+		width: 220px;
+		top: 89px;
+		padding-bottom: 20px;
+		-webkit-box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
+		box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
+		ul {
+			li {
+				a {
+					padding: 15px 30px;
+				}
+			}
+		}
+		.btn {
+			display: none;
+		}
+	}
+	.fa-bars:focus, .fa-times:focus {
+		outline: none;
+	}
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+	.box-title-category {
+		width: 281px;
+		span {
+			padding-left: 40px;
+			font-size: 18px;
+		}
+	}
+	.navbar {
+		left: 0;
+		width: 280px;
+		ul {
+			li {
+				a {
+					padding: 15px 40px;
+				}
+			}
+		}
+	}
+	.fa-bars {
+		position: absolute;
+		right: 35px;
+		top: 25px;
+	}
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+}

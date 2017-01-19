@@ -1,0 +1,109 @@
+.btn, .btn-author {
+	display: inline-block;
+	color: white;
+	text-transform: uppercase;
+	font-family: $p-font-medium;
+}
+.btn {
+	padding: 20px 20px 16px 20px;
+	font-size: 16px;
+	background: $brand-primary;
+	border: 1px solid $brand-primary;
+	&:hover {
+		background: white;
+		color: $brand-primary;
+	}
+}
+.btn-author {
+	padding: 12px 17px 9px 17px;
+	font-size: 14px;
+	border: 1px solid white;
+	&:hover {
+		background: $brand-primary;
+		border: 1px solid $brand-primary;
+		color: white;
+	}
+}
+.btn-read-more {
+	font-size: 14px;
+	font-family: $p-font-bold;
+	text-transform: uppercase;
+	color: $brand-primary;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;
+	&:before {
+		content: "\f107";
+		display: inline-block;
+		padding: 10px;
+		border: 1px solid $brand-primary;
+	    font: normal normal normal 14px/1 FontAwesome;
+	    font-size: inherit;
+	    text-rendering: auto;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	    margin-right: 10px;
+	    -webkit-transition: all 230ms ease-in-out;
+	    -moz-transition: all 230ms ease-in-out;
+	    -ms-transition: all 230ms ease-in-out;
+	    -o-transition: all 230ms ease-in-out;
+	    transition: all 230ms ease-in-out;
+	}
+	&:hover {
+		&:before {
+			background: $brand-primary;
+			color: white;
+		}
+	}
+}
+.btn-call-to-action {
+	border: 1px solid white;
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 15px 50px 12px 50px;
+	font-family: $p-font-medium;
+	&:hover {
+		border: 1px solid $brand-secondary;
+	}
+
+}
+
+.btn-back {
+	@extend .btn-call-to-action;
+	background: $brand-primary;
+	color: white!important;
+	border-color: $brand-primary;
+	padding-left: 30px;
+	text-decoration: none!important;
+	padding-right: 30px;
+	width: 100%;
+	text-align: center;
+	&:hover {
+		background: white;
+		border-color: $brand-primary;
+		color: $brand-primary!important;
+	}
+}
+// 500px
+@media all and (min-width: 500px) {
+	.btn {
+		padding: 20px 30px 16px 30px;
+		font-size: 18px;
+	}
+}
+// 768px
+@media all and (min-width: $screen-portrait) {
+	.btn-back {
+		display: inline-block;
+		width: auto;
+	}
+}
+// 992px
+@media all and (min-width: $screen-landscape) {
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+}

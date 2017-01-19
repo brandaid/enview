@@ -1,0 +1,55 @@
+.footer { 
+	text-align: center;
+	padding: 115px 0 60px 0;
+	small {
+		display: block;
+		font-family: $p-font-light;
+		color: $brand-primary;
+		font-size: 16px;
+	}
+	a.legal {
+		color: $brand-secondary;
+		display: inline-block;
+		padding: 10px;
+		&:hover {
+			color: black;
+		}
+	}
+}
+.brand-footer {
+	max-width: 160px;
+	margin-bottom: 15px;
+}
+
+// 768px
+@media all and (min-width: $screen-portrait) {
+	.footer { 
+		img, small, a.legal {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0;
+		}
+		img {
+			position: relative;
+			top: -5px;
+		}
+		small, a.legal {
+			padding: 0px 10px;
+		}
+		a.legal {
+			border-left: 1px solid $gray-light;
+
+		}
+	}
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+	.footer { 
+		padding: 250px 0 60px 0;
+	}
+}

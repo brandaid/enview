@@ -1,0 +1,91 @@
+html {
+	font-family: $p-font;
+}
+
+a, a:hover, a:active, a:focus {
+	text-decoration: none;
+	-webkit-transition: all 230ms ease-in-out;
+	-moz-transition: all 230ms ease-in-out;
+	-ms-transition: all 230ms ease-in-out;
+	-o-transition: all 230ms ease-in-out;
+	transition: all 230ms ease-in-out;
+}
+.container { 
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.col-left-layout {
+	margin-bottom: 40px;
+}
+
+.scrollToTop {
+	text-align:center; 
+	background: $brand-primary;
+	color: #444;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	font-size: 40px;
+	line-height: 44px;
+	width: 43px;
+	height: 43px;
+	display:none;
+	z-index: 99999;
+	i {
+		color: white;
+	}
+	&:hover {
+		text-decoration:none;
+	}
+}
+
+// 768px
+@media all and (min-width: $screen-portrait) {
+	.container { 
+		@include center;
+		max-width: 750px;
+	}
+
+	.scrollToTop {
+		font-size: 20px;
+	}
+
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+	.container { 
+		max-width: 970px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.table-layout {
+		display: table;
+		width: 100%;
+		border-bottom: 1px solid $gray-light;
+	}
+	.col-left-layout, .col-right-layout {
+		display: table-cell;
+		vertical-align: top;
+		width: 78%;
+	}
+	.col-left-layout {
+		padding-right: 16%;
+		margin-bottom: 0;
+	}
+	.col-right-layout {
+		width: 22%;
+	}
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+	.container { 
+		max-width: 1170px;
+	}
+	.scrollToTop {
+		font-size: 40px;
+	}
+}

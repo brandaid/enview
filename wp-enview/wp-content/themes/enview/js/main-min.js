@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#toggle").on("click",function(){$("#navbar").slideToggle(500,"easeInOutQuart"),$(this).toggleClass("fa-times")}),$(window).scroll(function(){$(this).scrollTop()>10?$(".scrollToTop").fadeIn():$(".scrollToTop").fadeOut()}),$(".scrollToTop").click(function(){return $("html, body").animate({scrollTop:0},800),!1})});

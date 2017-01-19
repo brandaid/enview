@@ -1,0 +1,66 @@
+.box-banner {
+	background: url(images/bkg-banner.jpg) no-repeat center center; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	position: relative;
+  	text-align: center;
+  	padding-top: 55px;
+  	padding-bottom: 55px;
+  	margin-bottom: 60px;
+  	&:before {
+  		content: "";
+  		position: absolute;
+  		background: rgba($brand-primary, 0.8);
+  		top: 0;
+  		left: 0;
+  		right: 0;
+  		bottom: 0;
+  		z-index: 1;
+  	}
+	small, h3, a {
+		text-transform: uppercase;
+		color: white;
+		position: relative;
+		z-index: 2;
+	}
+	small {
+		display: block;
+		font-size: 15px;
+		letter-spacing: 2px;
+		margin-bottom: 30px;
+		font-family: $p-font-medium;
+	}
+	h3 {
+		font-size: 40px;
+		font-family: $s-font-bold;
+		margin-bottom: 57px;
+	}
+}
+
+// 768px
+@media all and (min-width: $screen-portrait) {
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+	.box-banner {
+		padding-top: 80px;
+  		padding-bottom: 80px;
+		small {
+			font-size: 16px;
+			margin-bottom: 30px;
+		}
+		h3 {
+			font-size: 76px;
+			margin-bottom: 77px;
+			max-width: 980px;
+			@include center;
+		}
+	}
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+}

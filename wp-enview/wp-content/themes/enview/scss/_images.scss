@@ -1,0 +1,16 @@
+.responsive-image {
+	width: 100%;
+	height: auto;
+}
+
+// 768px
+@media all and (min-width: $screen-portrait) {
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+}
