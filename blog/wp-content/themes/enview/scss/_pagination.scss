@@ -1,0 +1,105 @@
+.navigation {
+    text-align: left;
+}
+.pagination {
+    margin: 0;
+    padding: 0;
+    li {
+        padding: 0!important;
+        margin: 0 5px 5px 0px!important;
+        display: inline-block;
+        border: none!important;
+        vertical-align: middle;
+        color: $brand-primary;
+        &:before {
+            display: none;
+        }
+        &.active {
+            a {
+                background: $brand-primary;
+                color: white;
+            }
+        }
+        a {
+            color: $brand-primary;
+            border: 1px solid $brand-primary;
+            text-align: center;
+            width: 32px;
+            height: 32px;
+            line-height: 30px;
+            font-size:0.875em; 
+            display: inline-block;
+            font-family: $p-font-bold;
+            &:hover {
+                border-color: $brand-secondary;
+                background: $brand-secondary;
+                color: white;
+            }
+        }
+        &.last, &.first {
+            a {
+               width: auto;
+               padding: 0 15px;
+               text-transform: uppercase;
+            }
+            
+        }
+        &.last {
+            float: right;
+        }
+        &.dot {
+            position: relative;
+            width: 32px;
+            height: 32px;
+            span {
+                position: absolute;
+                bottom: -18px;
+                left: 0;
+                right: 0;
+                text-align: center;
+            }
+        }
+    }
+}
+// < 425px
+@media all and (max-width: 425px) {
+    .pagination {
+        li{
+            &.last, &.first {
+                a {
+                   width: auto;
+                   padding: 0 10px;
+                    
+                    &:before, &:after{
+                        margin: 0;
+                    }
+                }
+
+            }
+        }
+    }
+}
+// > 768px
+@media all and (min-width: $screen-portrait) {
+    .pagination {
+        li {
+            margin: 0 0 5px;
+        }
+    }
+}
+// < 768px
+@media all and (max-width: $screen-portrait) {
+    .pagination {
+         li {
+            margin: 0 0 5px;
+        }
+    }
+}
+// 1200px
+@media all and (min-width: $screen-desktop) {
+    .pagination {
+         li {
+            margin: 0 5px 5px 5px;
+        }
+    }
+}

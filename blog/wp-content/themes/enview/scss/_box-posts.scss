@@ -1,0 +1,146 @@
+.table-post {
+	.container {
+		display: table;
+		width: 100%;
+		padding-bottom: 60px;
+		margin-bottom: 60px;
+		border-bottom: 1px solid $gray-light;
+	}
+	.col-post-info {
+		position: relative;
+		p {
+			font-family: $p-font-light;
+			font-size: 18px;
+			line-height: 1.4em;
+			margin-bottom: 35px;
+		}
+	}
+	.col-post-image {
+		display: table-header-group;
+		line-height: 0;
+		img {
+			margin-bottom: 25px;
+		}
+	}
+}
+body > main > article:nth-child(4) {
+	.container {
+		margin-bottom: 0;
+		border-bottom: 0;
+	}
+}
+.info-category, .info-title {
+	font-family: $s-font-bold;
+	text-transform: uppercase;
+}
+.info-category {
+	font-size: 14px;
+	padding-bottom: 15px;
+	margin-bottom: 25px;
+	border-bottom: 1px solid $dark-gray;
+	color: $dark-gray;
+	display: inline-block;
+}
+.info-title {
+	color: $brand-primary;
+	font-size: 40px;
+	a {
+		color: $brand-primary;
+		&:hover {
+			color: black;
+		} 
+	}
+}
+.info-tags {
+	margin: 10px 0 18px 0;
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		a {
+			font-family: $p-font-medium;
+			color: $brand-secondary;
+			padding-right: 4px;
+			&:after {
+				content: ", ";
+			}
+			&:hover {
+				color: $brand-primary;
+			}
+		}
+		&:last-child {
+			a:after {
+				display: none;
+			}
+		}
+	}
+}
+
+.widget-social {
+	position: absolute;
+	right: 10px;
+	bottom: 0px;
+	z-index: 9;
+}
+
+// 768px
+@media all and (min-width: $screen-portrait) {
+
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+	.table-post {
+		.col-post-info, .col-post-image {
+			display: table-cell;
+			vertical-align: top;
+			width: 40%;
+		}
+		.col-post-info {
+			p {
+				font-size: 16px;
+				margin-bottom: 20px;
+			}
+		}
+		.col-post-image {
+			width: 60%;
+			padding-left: 45px;
+			img {
+				max-width: 550px;
+			}
+		}
+	}
+	.info-category {
+		padding-bottom: 10px;
+		margin-bottom: 15px;
+	}
+	.info-title {
+		font-size: 30px;
+	}
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+	.table-post {
+		.col-post-info, .col-post-image {
+			width: 50%;
+		}
+		.col-post-info {
+			p {
+				font-size: 18px;
+				margin-bottom: 35px;
+			}
+			.btn-read-more {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+		}
+	}
+	.info-category {
+		padding-bottom: 15px;
+		margin-bottom: 25px;
+	}
+	.info-title {
+		font-size: 40px;
+	}
+}

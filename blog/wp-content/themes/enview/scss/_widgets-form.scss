@@ -1,0 +1,45 @@
+.screen-reader-text, .widgettitle {
+	display: none;
+}
+
+#searchform {
+	background: red;
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	margin-bottom: 30px;
+	.input-search {
+		border: 1px solid #ccc;
+		height: 44px;
+		width: 100%;
+		padding-left: 10px;
+		font-size: 18px;
+		font-family: $p-font;
+	}
+
+}
+#searchsubmit {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	background: transparent;
+	border: 0;
+	color: #8b95a7;
+	&:hover {
+		color: black;
+	}
+}
+
+// 768px
+@media all and (min-width: $screen-portrait) {
+
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+}
