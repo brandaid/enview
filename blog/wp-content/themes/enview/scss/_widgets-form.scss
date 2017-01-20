@@ -1,9 +1,7 @@
 .screen-reader-text, .widgettitle {
 	display: none;
 }
-
 #searchform {
-	background: red;
 	display: inline-block;
 	width: 100%;
 	position: relative;
@@ -14,7 +12,8 @@
 		width: 100%;
 		padding-left: 10px;
 		font-size: 18px;
-		font-family: $p-font;
+		font-family: $p-font-light;
+		outline: none;
 	}
 
 }
@@ -32,7 +31,26 @@
 
 // 768px
 @media all and (min-width: $screen-portrait) {
-
+	.box-forms {
+		text-align: right;
+		.box-search, .nice-select {
+			display: inline-block;
+			vertical-align: top;
+			width: 300px;
+			float: none;
+		}
+		.nice-select {
+			margin-left: 20px;
+		}
+	}
+	#searchform {
+		margin-bottom: 0;
+	}
+	.col-right-layout {
+		#searchform {
+			margin-bottom: 40px;
+		}
+	}
 }
 
 // 992px

@@ -39,7 +39,9 @@ a, a:hover, a:active, a:focus {
 		text-decoration:none;
 	}
 }
-
+.box-no-results {
+	padding: 50px 0;
+}
 // 768px
 @media all and (min-width: $screen-portrait) {
 	.container { 

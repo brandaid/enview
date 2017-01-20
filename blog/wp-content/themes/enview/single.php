@@ -8,7 +8,7 @@
 		<article class="post-featured" style="background: url('<?php echo $thumb_url[0]; ?>') center 0 / cover no-repeat;">
 			<div class="content-post">
 				<small><?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></small>
-				<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+				<h1><?php the_title(); ?></h1>
 				<ul class="box-author">
 					<li><?php echo get_avatar( get_the_author_meta( 'ID' ) , 250 ); ?><span>by <b><?php the_author(); ?></b></span></li>
 				</ul>
@@ -17,7 +17,7 @@
 
 		<section class="box-breadcrumbs">
 			<div class="container">
-				<a href="/blog" class="breadcrumb">Back To Articles</a>
+				<a href="<?php bloginfo('url'); ?>" class="breadcrumb">Back To Articles</a>
 			</div>
 		</section>
 
@@ -28,7 +28,7 @@
 						<div class="container">
 							<?php the_content(); ?>
 							<div class="box-back">
-								<a href="/blog" class="btn-back">Back to articles</a>
+								<a href="<?php bloginfo('url'); ?>" class="btn-back">Back to articles</a>
 							</div>
 						</div>
 					</article>

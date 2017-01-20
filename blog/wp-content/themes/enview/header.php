@@ -11,6 +11,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/font-awesome.min.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/nice-select.css">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -21,6 +22,12 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+	<div id="loader" style="background:white;position:absolute;top:0;left:0;right:0;bottom:0;z-index:999999999999999;"></div>
+	<script>
+	    window.onload = function(){
+	      $("#loader").fadeOut(1000,function(){$(this).remove()});
+	    }
+	</script>
 	<header class="header">
 		<div class="col-brand">
 			<a href="<?php bloginfo('url'); ?>">
@@ -34,7 +41,27 @@
 		</div>
 		<div class="col-nav">
 			<div class="box-title-category">
-				<span>POWERLINE</span>
+				
+				<span>
+
+				<?php if (is_home()) { ?>
+
+				 	BLOG HOME
+
+				<?php } elseif (is_search()) { ?> 
+
+					SEARCH PAGE
+
+				<?php } elseif (is_tag()) { ?> 
+
+					TAG PAGE
+
+				<?php } else { ?> 
+
+					<?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?>
+				<?php } ?>
+				</span>
+
 				<button id="toggle" class="fa fa-bars"></button>
 			</div>
 			<a href="<?php the_field('cta_link','option') ?>" class="btn"><?php the_field('cta_text','option') ?></a>
