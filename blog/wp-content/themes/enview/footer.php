@@ -1,7 +1,7 @@
 	</main>
 	<footer class="footer">
 		<div class="container">
-			<a href="<?php bloginfo('url'); ?>">
+			<a href="http://www.enview.com/">
 				<?php
 				    $attachment_id = get_field('brand','option');
 				    $size = "brand";

@@ -5,6 +5,8 @@
 	</form>
 </div>
 
-<?php if ( is_active_sidebar( 'sidebar-forms' ) ) { ?>
-	<?php dynamic_sidebar( 'sidebar-forms' ); ?>
-<?php } ?>
+<select id="tags" name="tag-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+	<option value="#">All Topics</option>
+	<?php dropdown_tag_cloud('number=0&order=asc'); ?>
+</select>
+

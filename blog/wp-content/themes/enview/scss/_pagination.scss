@@ -31,8 +31,8 @@
             display: inline-block;
             font-family: $p-font-bold;
             &:hover {
-                border-color: $brand-secondary;
-                background: $brand-secondary;
+                border-color: $brand-primary;
+                background: $brand-primary;
                 color: white;
             }
         }

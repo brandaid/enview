@@ -57,11 +57,11 @@ html {
 
 a, a:hover, a:active, a:focus {
   text-decoration: none;
-  -webkit-transition: all 230ms ease-in-out;
-  -moz-transition: all 230ms ease-in-out;
-  -ms-transition: all 230ms ease-in-out;
-  -o-transition: all 230ms ease-in-out;
-  transition: all 230ms ease-in-out; }
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -ms-transition: all 250ms ease-in-out;
+  -o-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out; }
 
 .container {
   padding-left: 15px;
@@ -167,11 +167,11 @@ a, a:hover, a:active, a:focus {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin-right: 10px;
-    -webkit-transition: all 230ms ease-in-out;
-    -moz-transition: all 230ms ease-in-out;
-    -ms-transition: all 230ms ease-in-out;
-    -o-transition: all 230ms ease-in-out;
-    transition: all 230ms ease-in-out; }
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out; }
   .btn-read-more:hover:before {
     background: #003366;
     color: white; }
@@ -484,7 +484,7 @@ p {
   width: 100%;
   height: 100%;
   vertical-align: middle;
-  padding: 40px;
+  padding: 40px 0;
   text-align: center;
   position: relative;
   z-index: 9; }
@@ -499,7 +499,9 @@ p {
     letter-spacing: 2px; }
   .content-post h1 {
     font-family: "Stratum1WebBold", sans-serif;
-    font-size: 40px; }
+    font-size: 40px;
+    padding-left: 15px;
+    padding-right: 15px; }
     .content-post h1 a {
       color: white; }
       .content-post h1 a:hover {
@@ -535,7 +537,8 @@ p {
     margin-bottom: 40px; }
   .content-post h1 {
     font-size: 60px;
-    line-height: .9em; }
+    line-height: .9em;
+    padding: 0; }
   .box-author {
     margin-top: 60px; }
     .box-author li {
@@ -704,6 +707,9 @@ body > main > article:nth-child(4) .container {
   right: 10px;
   bottom: 0px;
   z-index: 9; }
+
+.ssba a:hover {
+  opacity: .8; }
 
 @media all and (min-width: 992px) {
   .table-post .col-post-info, .table-post .col-post-image {
@@ -931,8 +937,8 @@ body > main > article:nth-child(4) .container {
       display: inline-block;
       font-family: "din-bold", sans-serif; }
       .pagination li a:hover {
-        border-color: #00acee;
-        background: #00acee;
+        border-color: #003366;
+        background: #003366;
         color: white; }
     .pagination li.last a, .pagination li.first a {
       width: auto;
@@ -1035,8 +1041,8 @@ body > main > article:nth-child(4) .container {
   -webkit-box-shadow: inset 0 2px 2px 0px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 2px 2px 0px rgba(0, 0, 0, 0.1);
   text-align: left !important;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1068,8 +1074,8 @@ body > main > article:nth-child(4) .container {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-  -webkit-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
   width: 5px; }
 
 .nice-select.open:after {
@@ -1130,6 +1136,7 @@ body > main > article:nth-child(4) .container {
   overflow: hidden;
   padding: 0;
   pointer-events: none;
+  font-family: "din-light", sans-serif;
   position: absolute;
   top: 100%;
   left: 0;
@@ -1140,8 +1147,8 @@ body > main > article:nth-child(4) .container {
   -webkit-transform: scale(0.75) translateY(-21px);
   -ms-transform: scale(0.75) translateY(-21px);
   transform: scale(0.75) translateY(-21px);
-  -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
-  transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  -webkit-transition: all 0.25s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  transition: all 0.25s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
   z-index: 9; }
 
 .nice-select .list:hover .option:not(:hover) {
@@ -1157,8 +1164,8 @@ body > main > article:nth-child(4) .container {
   padding-left: 18px;
   padding-right: 29px;
   text-align: left;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s; }
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s; }
 
 .nice-select .option:hover {
   color: white; }

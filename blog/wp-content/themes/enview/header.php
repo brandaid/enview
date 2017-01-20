@@ -30,7 +30,7 @@
 	</script>
 	<header class="header">
 		<div class="col-brand">
-			<a href="<?php bloginfo('url'); ?>">
+			<a href="http://www.enview.com/">
 				<?php
 				    $attachment_id = get_field('brand','option');
 				    $size = "brand";
@@ -42,7 +42,7 @@
 		<div class="col-nav">
 			<div class="box-title-category">
 				
-				<span>
+				<span id="open-nav">
 
 				<?php if (is_home()) { ?>
 
@@ -54,7 +54,7 @@
 
 				<?php } elseif (is_tag()) { ?> 
 
-					TAG PAGE
+					TOPICS
 
 				<?php } else { ?> 
 

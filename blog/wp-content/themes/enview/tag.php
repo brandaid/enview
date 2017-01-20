@@ -10,7 +10,7 @@
 		<section>
 	    	<div class="container">
 	           <div class="box-details">
-	               <h3>Results for tag: <b><?php single_tag_title(); ?></b></h3>
+	               <h3>Results for topic: <b><?php single_tag_title(); ?></b></h3>
 	           </div>
             </div>
 		</section>

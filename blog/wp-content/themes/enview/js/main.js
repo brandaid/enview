@@ -6,6 +6,11 @@ $(document).ready(function() {
 		$(this).toggleClass('fa-times');
 	});
 
+	$( "#open-nav" ).on( "click", function() {
+		$('#navbar').slideToggle(500,'easeInOutQuart');
+		$('#toggle').toggleClass('fa-times');
+	});
+
 	//SCROLL ANIMATED
 
 	$(window).scroll(function(){
@@ -24,6 +29,6 @@ $(document).ready(function() {
 
 	//CUSTOMIZE SELECT
 
-	$('#cat').niceSelect();
+	$('#tags').niceSelect();
 	
 });

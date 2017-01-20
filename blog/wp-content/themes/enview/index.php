@@ -14,7 +14,7 @@
 		?>
 		<article class="post-featured" style="background: url('<?php echo $thumb_url[0]; ?>') center 0 / cover no-repeat;">
 			<div class="content-post">
-				<small><?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></small>
+				<small>FEATURED ARTICLE</small>
 				<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 				<ul class="box-author">
 					<li><?php echo get_avatar( get_the_author_meta( 'ID' ) , 250 ); ?><span>by <b><?php the_author(); ?></b></span></li>
