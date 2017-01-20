@@ -17,6 +17,8 @@
     padding-left: 10px;
     padding-right: 30px;
     position: relative;
+    -webkit-box-shadow:inset 0 2px 2px 0px rgba(0,0,0,0.1);
+    box-shadow:inset 0 2px 2px 0px rgba(0,0,0,0.1);
     text-align: left !important;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -146,6 +148,9 @@
 
 // 768px
 @media all and (min-width: $screen-portrait) {
+    .nice-select {
+        margin-bottom: 0;
+    }
     .col-right-layout {
         .nice-select {
             margin-bottom: 40px;
@@ -155,9 +160,7 @@
 
 // 992px
 @media all and (min-width: $screen-landscape) {
-    .nice-select {
-        margin-bottom: 0;
-    }
+    
 }
 
 // 1200px

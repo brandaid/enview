@@ -1,8 +1,12 @@
 <?php get_header(); ?>
 
 		<!-- FEATURED POST -->
-		<?php $loop = new WP_Query( array( 'post_type' => 'post', 'order' => 'DESC', 'posts_per_page' => 1,'post__in'  => get_option( 'sticky_posts' ),'ignore_sticky_posts' => 1 ) ); ?>
-  		<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>	
+		<?php $loop = new WP_Query( array( 'post_type' => 'post', 'order' => 'DESC', 'posts_per_page' => 1 ) ); ?>
+  		<?php while ( $loop->have_posts() ) : $loop->the_post(); 
+
+  		$do_not_duplicate = $post->ID; //This is the magic line
+
+  		?>	
 		
 		<?php
 		$thumb_id = get_post_thumbnail_id();
@@ -31,12 +35,16 @@
 		</section>
 
 		<?php if ( have_posts() ) : ?>       
-        <?php while ( have_posts() ) : the_post(); ?>
+        <?php while ( have_posts() ) : the_post(); 
+
+        if( $post->ID == $do_not_duplicate ) continue; 
+
+        ?>
 
 		<article class="table-post">
 			<div class="container">
 				<div class="col-post-info">
-					<small class="info-category">ssss<?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></small>
+					<small class="info-category"><?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></small>
 					<h2 class="info-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 					<?php
 						if(get_the_tag_list()) {

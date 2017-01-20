@@ -2,7 +2,11 @@
 
 		<!-- FEATURED POST -->
 		<?php $loop = new WP_Query( array( 'post_type' => 'post', 'order' => 'DESC', 'posts_per_page' => 1,'cat' => get_query_var('cat'), ) ); ?>
-  		<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>	
+  		<?php while ( $loop->have_posts() ) : $loop->the_post(); 
+
+  		$do_not_duplicate = $post->ID; //This is the magic line
+
+  		?>	
 		
 		<?php
 		$thumb_id = get_post_thumbnail_id();
@@ -32,7 +36,9 @@
 		
 
 		<?php if ( have_posts() ) : ?>       
-        <?php while ( have_posts() ) : the_post(); ?>
+        <?php while ( have_posts() ) : the_post(); 
+        if( $post->ID == $do_not_duplicate ) continue;
+        ?>
 
 		<article class="table-post">
 			<div class="container">
