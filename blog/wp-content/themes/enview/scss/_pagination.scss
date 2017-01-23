@@ -4,6 +4,7 @@
 .pagination {
     margin: 0;
     padding: 0;
+    text-align: center;
     li {
         padding: 0!important;
         margin: 0 5px 5px 0px!important;
@@ -37,8 +38,14 @@
             }
         }
         &.last, &.first {
+            display: block!important;
+            clear: both!important;
+            width: 100%;
+            margin: 5px 0 10px 0 !important;
             a {
                width: auto;
+               min-width: 160px;
+
                padding: 0 15px;
                text-transform: uppercase;
             }
@@ -79,11 +86,28 @@
         }
     }
 }
+// > 500px
+@media all and (min-width: 500px) {
+    .pagination {
+        text-align: left;
+        li {
+            margin: 0 0 5px;
+            &.last, &.first {
+                display: inline-block!important;
+                width: auto;
+                margin: 0 0 5px!important;
+            }
+        }
+    }
+}
+
 // > 768px
 @media all and (min-width: $screen-portrait) {
     .pagination {
         li {
-            margin: 0 0 5px;
+            &.last, &.first {
+                margin: 0 0 5px!important;
+            }
         }
     }
 }

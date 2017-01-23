@@ -321,6 +321,7 @@ a, a:hover, a:active, a:focus {
     .navbar ul li a:hover {
       background: #00acee;
       color: white;
+      font-size: 16px;
       font-family: "din-bold", sans-serif; }
   .navbar .btn {
     margin-left: 40px;
@@ -913,7 +914,8 @@ body > main > article:nth-child(4) .container {
 
 .pagination {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  text-align: center; }
   .pagination li {
     padding: 0 !important;
     margin: 0 5px 5px 0px !important;
@@ -940,10 +942,16 @@ body > main > article:nth-child(4) .container {
         border-color: #003366;
         background: #003366;
         color: white; }
-    .pagination li.last a, .pagination li.first a {
-      width: auto;
-      padding: 0 15px;
-      text-transform: uppercase; }
+    .pagination li.last, .pagination li.first {
+      display: block !important;
+      clear: both !important;
+      width: 100%;
+      margin: 5px 0 10px 0 !important; }
+      .pagination li.last a, .pagination li.first a {
+        width: auto;
+        min-width: 160px;
+        padding: 0 15px;
+        text-transform: uppercase; }
     .pagination li.last {
       float: right; }
     .pagination li.dot {
@@ -964,9 +972,19 @@ body > main > article:nth-child(4) .container {
     .pagination li.last a:before, .pagination li.last a:after, .pagination li.first a:before, .pagination li.first a:after {
       margin: 0; } }
 
+@media all and (min-width: 500px) {
+  .pagination {
+    text-align: left; }
+    .pagination li {
+      margin: 0 0 5px; }
+      .pagination li.last, .pagination li.first {
+        display: inline-block !important;
+        width: auto;
+        margin: 0 0 5px !important; } }
+
 @media all and (min-width: 768px) {
-  .pagination li {
-    margin: 0 0 5px; } }
+  .pagination li.last, .pagination li.first {
+    margin: 0 0 5px !important; } }
 
 @media all and (max-width: 768px) {
   .pagination li {
@@ -1053,7 +1071,7 @@ body > main > article:nth-child(4) .container {
 .nice-select:hover {
   border-color: #00acee; }
 
-.nice-select:active, .nice-select.open, .nice-select:focus {
+.nice-select:active {
   outline: 1px solid #00acee;
   border-color: #00acee; }
 
